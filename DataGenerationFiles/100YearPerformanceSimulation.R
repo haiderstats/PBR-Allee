@@ -18,6 +18,10 @@ EQ = findEquilibrium(.04, 10000, 1000, DetPBR)
 
 startingPop = EQ[2] + .05*10000
 
+#Note we take the last year in the data structure, and all the 
+#columns that aren't the year so the 2nd through the 2001st.
+#We divide by 10000 to get a proporiton of K instead of a specific number.
+
 #Do the simulations
 alleeSmallCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 100, cv = .2, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
 alleeSmallCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 100, cv = .2, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 

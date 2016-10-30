@@ -85,7 +85,7 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18))  +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
   scale_color_grey()+ 
-  annotate("text", x = 10, y = .85, label = "C", size = 13) 
+  annotate("text", x = 10, y = .85, label = "C", size = 13)
 
 #We will take the legend from this plot so we are choosing to label this one.
 smallBest$labels$colour = "Model"
@@ -204,7 +204,7 @@ big20th = big20th + theme(legend.position = "none")
 
 grid.arrange(smallBest, bigBest, big20th, small20th, legend, ncol=3, layout_matrix = cbind(c(2,1), c(3,4), 5),widths=c(5,5, 3),
              bottom = textGrob("Year                       ", gp=gpar(fontsize=35,font=1)),
-             left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=8), rot = 90))
+             left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=1), rot = 90))
 
 
 
@@ -373,8 +373,8 @@ big20th = big20th + theme(legend.position = "none")
 
 grid.arrange(smallBest, bigBest, big20th, small20th, legend, ncol=3, 
              layout_matrix = cbind(c(2,1), c(3,4), 5),widths=c(5,5,3), 
-             bottom = textGrob("Year                      ", gp=gpar(fontsize=35,font=8)), 
-             left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=8), rot = 90))
+             bottom = textGrob("Year                      ", gp=gpar(fontsize=35,font=1)), 
+             left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=1), rot = 90))
 
 
 

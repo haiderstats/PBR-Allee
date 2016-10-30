@@ -1,9 +1,11 @@
 source('./FunctionFiles/HelperFunctions.R')
 
-#This file is used for the carrying capacity simulation. NOTE THAT THIS SIMULATION WILL PROBABLY TAKE ABOUT A DAY TO RUN.
-#For each population and CV we have lots of different values of the recovery factor, so we run a ton of simulations. Also we
-#Simulate out to 1000 years so it takes a LONG time.
- 
+#This file is used for the carrying capacity simulation.
+#NOTE THAT THIS SIMULATION WILL PROBABLY TAKE ABOUT A DAY TO RUN.
+#For each population and CV we have lots of different values of the recovery factor,
+#thus the number of simulation is quite high
+
+#Note our choice for z reflects the 15th percentile.
 
 #Set the seed so we can replicate our results.
 set.seed(42)
@@ -12,10 +14,15 @@ set.seed(42)
 DetPBR = biggestTakeAllee(.04, 10000, 1000)$h
 EQ = findEquilibrium(.04, 10000, 1000, DetPBR)
 
+#Get the second equilibrium (Stable)
 startingPop = EQ[2] + .05*10000
 
-
+#Low CV, Cetceans.
 #Do the simulations.
+
+#Note we take the last year in the data structure, and all the 
+#columns that aren't the year so the 2nd through the 2001st.
+#We divide by 10000 to get a proporiton of K instead of a specific number.
 alleeSmallCet1 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
 alleeSmallCet.95 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = .95, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
 alleeSmallCet.9 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = .9, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
@@ -106,7 +113,8 @@ allAlleeSmallCet = rbind.data.frame(alleeSmallCet1,
 #Label the data.
 allAlleeSmallCet = cbind.data.frame(Type = "Cetacean, CV = 0.2", allAlleeSmallCet)
 
-########
+
+#High CV, Cetceans.
 
 #Same process as above.
 alleeBigCet1 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
@@ -200,6 +208,8 @@ allAlleeBigCet = rbind.data.frame(alleeBigCet1,
 allAlleeBigCet = cbind.data.frame(Type = "Cetacean, CV = 0.8 ", allAlleeBigCet)
 
 ##############
+
+#Low CV, Bats.
 
 #Same process, different level of growth rate.
 DetPBR = biggestTakeAllee(.1, 10000, 500)$h
@@ -296,7 +306,10 @@ allAlleeSmallBat = rbind.data.frame(alleeSmallBat1,
 
 allAlleeSmallBat = cbind.data.frame(Type = "Indiana Bat, CV = 0.2", allAlleeSmallBat)
 
-########
+
+
+#High CV, Bats.
+
 
 alleeBigBat1 = monteCarloModelAllee(initialPop = startingPop, r = 0.10, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
 alleeBigBat.95 = monteCarloModelAllee(initialPop = startingPop, r = 0.10, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = .95, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
