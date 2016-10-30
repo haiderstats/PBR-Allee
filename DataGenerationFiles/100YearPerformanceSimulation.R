@@ -1,4 +1,4 @@
-source('HelperFunctions.R')
+source('./FunctionFiles/HelperFunctions.R')
 
 #This file is used for the 100 year performance criterion simulation. There is a lot of simulations here. We have to try varying levels 
 #of z (our percentile) for both a recovery factor of 1 and a recovery factor of 0.5. This follows the same structure as all other simulations.

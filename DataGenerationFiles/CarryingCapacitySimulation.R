@@ -1,4 +1,4 @@
-source('HelperFunctions.R')
+source('./FunctionFiles/HelperFunctions.R')
 
 #This file is used for the carrying capacity simulation. NOTE THAT THIS SIMULATION WILL PROBABLY TAKE ABOUT A DAY TO RUN.
 #For each population and CV we have lots of different values of the recovery factor, so we run a ton of simulations. Also we

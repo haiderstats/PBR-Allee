@@ -12,7 +12,7 @@ library(ggplot2)
 #100 Year Criterion:
 
 #Load the data.
-Year100Dat = read.csv("100YearPerformanceData.csv")
+Year100Dat = read.csv("./Data/100YearPerformanceData.csv")
 
 #Give labels to our data. Lq is our lower quantile and Hq is the higher quantile.
 names(Year100Dat) = c("Percentile", "Type", "N", "value", "sd", "Lq","Hq", "Recovery Factor")
@@ -47,7 +47,7 @@ Year100Dat$`Recovery Factor` = factor(Year100Dat$`Recovery Factor`)
 
 #Same steps as above. 
  
-Year20Dat = read.csv("20YearPerformanceData.csv")
+Year20Dat = read.csv("./Data/20YearPerformanceData.csv")
 
 names(Year20Dat) = c("Percentile", "Type", "N", "value", "sd", "Lq","Hq", "Recovery Factor")
 
@@ -79,7 +79,7 @@ ggplot(data = Year20Dat, aes(Percentile, value, colour = `Recovery Factor`)) +
 
 #Carrying Capacity Simulation
 
-fullData = read.csv("CarryingCapGoalData.csv")
+fullData = read.csv("./Data/CarryingCapGoalData.csv")
 
 ggplot(data = fullData, aes(Factor, value)) +
   theme_bw() + 

@@ -1,7 +1,7 @@
 #Base Case Simulations Simulations
 
 #Call our helper functions.
-source('WadeReplicationHelperFunctions.R')
+source('./FunctionFiles/HelperFunctions.R')
 
 #Set the seed so we can replicate our results.
 set.seed(42)
