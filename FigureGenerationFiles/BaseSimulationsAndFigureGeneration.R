@@ -76,15 +76,15 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   geom_line(aes(y = value, group = variable, color = "Allee Model; Allee PBR")) +
   ylim(0,1) +
   geom_line(data = logisticSmallBest, aes(x = Year, y = value, group = variable, color = "Logistic Model; Logistic PBR")) + 
-  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Logistic PBR")) +
-  labs(title = expression(list(N[min] == Best~~Est.~~ CV == 0.2)), y = "", x = "") +
+  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Classical PBR")) +
+  labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.2)), y = "", x = "") +
   geom_hline(yintercept = .5) + 
   theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30)) + 
   theme(legend.text=element_text(size=20)) + theme(legend.title = element_text(size = 20)) + 
   scale_colour_brewer(name = "Model", palette = "Set1") + 
   theme(axis.text = element_text(face = "bold", color = "black", size = 18))  +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
-  scale_color_grey()+ 
+    scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "C", size = 13)
 
 #We will take the legend from this plot so we are choosing to label this one.
@@ -121,7 +121,7 @@ small20th = ggplot(data = alleeSmall20th, aes(Year))+
   scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18))  +
   geom_hline(yintercept = .6841641, linetype = "dashed")+
-  scale_color_grey()+ 
+    scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "D", size = 13) 
 
 ####
@@ -148,14 +148,14 @@ bigBest = ggplot(data = alleeBigBest, aes(Year))+
   ylim(0,1) +
   geom_line(data = logisticBigBest, aes(x = Year, y = value, group = variable, color = "Logistic Model")) + 
   geom_line(data = alleeBigBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model With Original PBR"))  +
-  labs(title = expression(list(N[min] == Best~~Est.~~ CV == 0.8)),x = "", y = "") +
+  labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.8)),x = "", y = "") +
   geom_hline(yintercept = .5) +
   theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30))  +
   theme(legend.text=element_text(size=15)) + theme(legend.title = element_text(size = 15)) + 
   scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18))  +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
-  scale_color_grey()+ 
+    scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "A", size = 13) 
 
 ####
@@ -189,7 +189,7 @@ big20th = ggplot(data = alleeBig20th, aes(Year))+
   scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18)) +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
-  scale_color_grey()+ 
+    scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "B", size = 13) 
 
 #Get the legend of the smallBest plot and get rid of the other plots legends. 
@@ -259,13 +259,13 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   geom_line(aes(y = value, group = variable, color = "Allee Model; Allee PBR")) +
   ylim(0,1) +
   geom_line(data = logisticSmallBest, aes(x = Year, y = value, group = variable, color = "Logistic Model; Logistic PBR")) +
-  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Logistic PBR")) +
-  labs(title = expression(list(N[min] == Best~~Est.~~ CV == 0.2)), y = "", x = "") + geom_hline(yintercept = .5) + 
+  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Classical PBR")) +
+  labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.2)), y = "", x = "") + geom_hline(yintercept = .5) + 
   theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30)) + theme(legend.text=element_text(size=20)) +
   theme(legend.title = element_text(size = 20)) + scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18)) + 
   geom_hline(yintercept = .6841641, linetype = "dashed") +
-  scale_color_grey() + 
+    scale_color_grey(start = .01, end = .85)  + 
   annotate("text", x = 10, y = .85, label = "C", size = 13) 
 
 smallBest$labels$colour = "Model"
@@ -300,7 +300,7 @@ small20th = ggplot(data = alleeSmall20th, aes(Year))+
   theme(legend.text=element_text(size=15)) + theme(legend.title = element_text(size = 15)) +
   scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18)) +
-  geom_hline(yintercept = .6841641, linetype = "dashed") +scale_color_grey() + 
+  geom_hline(yintercept = .6841641, linetype = "dashed") +  scale_color_grey(start = .01, end = .85)  + 
   annotate("text", x = 10, y = .85, label = "D", size = 13) 
 
 ####
@@ -326,12 +326,12 @@ bigBest = ggplot(data = alleeBigBest, aes(Year))+ geom_line(aes(y = value, group
   ylim(0,1) +
   geom_line(data = logisticBigBest, aes(x = Year, y = value, group = variable, color = "Logistic Model")) +
   geom_line(data = alleeBigBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model With Original PBR"))  +
-  labs(title = expression(list(N[min] == Best~~Est.~~ CV == 0.8)), y = "", x = "", y = "") + 
+  labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.8)), y = "", x = "", y = "") + 
   geom_hline(yintercept = .5) + theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30)) +
   theme(legend.text=element_text(size=15)) + theme(legend.title = element_text(size = 15)) +
   scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18)) +
-  geom_hline(yintercept = .6841641, linetype = "dashed") + scale_color_grey()+ 
+  geom_hline(yintercept = .6841641, linetype = "dashed") +   scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "A", size = 13) 
 
 ####
@@ -360,8 +360,10 @@ big20th = ggplot(data = alleeBig20th, aes(Year))+ geom_line(aes(y = value, group
   theme(legend.title = element_text(size = 15)) + scale_colour_brewer(name = "Model", palette = "Set1") +
   theme(axis.text = element_text(face = "bold", color = "black", size = 18)) +
   geom_hline(yintercept = .6841641, linetype = "dashed")+
-  scale_color_grey() + 
+  scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "B", size = 13) 
+
+
 
 legend <- get_legend(smallBest)
 smallBest = smallBest + theme(legend.position = "none")
