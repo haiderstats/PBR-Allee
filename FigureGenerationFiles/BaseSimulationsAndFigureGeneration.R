@@ -76,7 +76,7 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   geom_line(aes(y = value, group = variable, color = "Allee Model; Allee PBR")) +
   ylim(0,1) +
   geom_line(data = logisticSmallBest, aes(x = Year, y = value, group = variable, color = "Logistic Model; Logistic PBR")) + 
-  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Classical PBR")) +
+  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Logisitic PBR")) +
   labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.2)), y = "", x = "") +
   geom_hline(yintercept = .5) + 
   theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30)) + 
@@ -202,8 +202,9 @@ big20th = big20th + theme(legend.position = "none")
 #Arrange the four plots into one big plot. Note the lots of whitespace in the year name. This is to make it look centered.
 #Maybe there is an argument for this? I'm unsure.
 
+#First Simulation Figure
 grid.arrange(smallBest, bigBest, big20th, small20th, legend, ncol=3, layout_matrix = cbind(c(2,1), c(3,4), 5),widths=c(5,5, 3),
-             bottom = textGrob("Year                       ", gp=gpar(fontsize=35,font=1)),
+             bottom = textGrob("Year                          ", gp=gpar(fontsize=35,font=1)),
              left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=1), rot = 90))
 
 
@@ -259,7 +260,7 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   geom_line(aes(y = value, group = variable, color = "Allee Model; Allee PBR")) +
   ylim(0,1) +
   geom_line(data = logisticSmallBest, aes(x = Year, y = value, group = variable, color = "Logistic Model; Logistic PBR")) +
-  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Classical PBR")) +
+  geom_line(data = alleeSmallBestNormPBR, aes(x = Year, y = value, group = variable, color = "Allee Model; Logisitic PBR")) +
   labs(title = expression(list(N[min] == paste(50, th)~~Perc.~~ CV == 0.2)), y = "", x = "") + geom_hline(yintercept = .5) + 
   theme(plot.title = element_text(lineheight=3, face="bold", color="black", size=30)) + theme(legend.text=element_text(size=20)) +
   theme(legend.title = element_text(size = 20)) + scale_colour_brewer(name = "Model", palette = "Set1") +
@@ -375,7 +376,7 @@ big20th = big20th + theme(legend.position = "none")
 
 grid.arrange(smallBest, bigBest, big20th, small20th, legend, ncol=3, 
              layout_matrix = cbind(c(2,1), c(3,4), 5),widths=c(5,5,3), 
-             bottom = textGrob("Year                      ", gp=gpar(fontsize=35,font=1)), 
+             bottom = textGrob("Year                          ", gp=gpar(fontsize=35,font=1)), 
              left = textGrob("Fraction of K", gp=gpar(fontsize=35,font=1), rot = 90))
 
 

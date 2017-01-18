@@ -29,12 +29,12 @@ Year100Dat$`Recovery Factor` = factor(Year100Dat$`Recovery Factor`)
   scale_x_continuous(breaks=seq(0, 50, 5))+
   scale_y_continuous(limits = c(0,1), breaks = c(0,.2,.4,.6,.8,1.00))+ 
   labs( x = expression(N[min]~~Percentile), y = "Fraction of K in Year 100") +
-  theme(axis.text = element_text(size = 15, family = "bold"), axis.title = element_text(size = 25, family = "bold")) +
-  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25, family = "bold")) + 
-  theme(legend.text=element_text(size=15, family = "bold")) +
-  theme(legend.title = element_text(size = 15, family = "bold"))+
+  theme(axis.text = element_text(size = 15), axis.title = element_text(size = 25)) +
+  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25)) + 
+  theme(legend.text=element_text(size=15)) +
+  theme(legend.title = element_text(size = 15))+
   theme(axis.title.x = element_text(margin = margin(20,0,0,0))) + 
-  theme(strip.text.x = element_text(size = 20,family = "bold")) +
+  theme(strip.text.x = element_text(size = 20)) +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
   guides(col = guide_legend(reverse = FALSE)) + 
   scale_color_grey(end = .6) +
@@ -61,12 +61,12 @@ ggplot(data = Year20Dat, aes(Percentile, value, colour = `Recovery Factor`)) +
   scale_x_continuous(breaks=seq(0, 50, 5))+
   scale_y_continuous(limits = c(0,1), breaks = c(0,.2,.4,.6,.8,1.00))+ 
   labs(x = expression(N[min]~~Percentile), y = "Fraction of K in Year 20") +
-  theme(axis.text = element_text(size = 15, family = "bold"), axis.title = element_text(size = 25, family = "bold")) +
-  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25, family = "bold")) + 
-  theme(legend.text=element_text(size=15, family = "bold")) +
-  theme(legend.title = element_text(size = 15, family = "bold"))+
+  theme(axis.text = element_text(size = 15), axis.title = element_text(size = 25)) +
+  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25)) + 
+  theme(legend.text=element_text(size=15)) +
+  theme(legend.title = element_text(size = 15))+
   theme(axis.title.x = element_text(margin = margin(20,0,0,0))) + 
-  theme(strip.text.x = element_text(size = 20,family = "bold")) +
+  theme(strip.text.x = element_text(size = 20)) +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
   guides(col = guide_legend(reverse = FALSE))+
   scale_color_grey(end = .6) +
@@ -89,12 +89,12 @@ ggplot(data = fullData, aes(Factor, value)) +
   scale_y_continuous(limits = c(0,1), breaks = c(0,.2,.4,.6,.8,1.00))+ 
   scale_x_continuous(breaks=seq(0, 1, .1))+
   labs(x = "Recovery Factor", y = "Fraction of K After Recovery to Equilibrium") +
-  theme(axis.text = element_text(size = 15, family = "bold"), axis.title = element_text(size = 25, family = "bold")) +
-  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25, family = "bold")) + 
-  theme(legend.text=element_text(size=15, family = "bold")) +
-  theme(legend.title = element_text(size = 15, family = "bold"))+
+  theme(axis.text = element_text(size = 15), axis.title = element_text(size = 25)) +
+  theme(axis.title.y = element_text(margin = margin(0,30,0,0)), plot.title = element_text(size = 25)) + 
+  theme(legend.text=element_text(size=15)) +
+  theme(legend.title = element_text(size = 15))+
   theme(axis.title.x = element_text(margin = margin(20,0,0,0))) + 
-  theme(strip.text.x = element_text(size = 20,family = "bold")) +
+  theme(strip.text.x = element_text(size = 20)) +
   geom_hline(yintercept = .9, linetype = "dashed") +
   guides(col = guide_legend(reverse = TRUE)) +
   geom_text(data = data.frame(x = .05, y = 0.25, label = c("A", "B","C","D"), Type = levels(Year100Dat$Type)), aes(x, y, label = label), inherit.aes = FALSE, parse = FALSE,size = 12)+
