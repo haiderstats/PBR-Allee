@@ -1,22 +1,18 @@
+#This is the file that creates the functions needed to run the analysis for:
+#Incorporating the Allee Effect into the Potential Biological Removal calculation.
+#The structure for this is creating many helper functions for one large function call 
+#later on. 
+
 
 #Load in the libraries we will use.
 library(reshape2); library(ggplot2); library(gridExtra); library(grid)
 
 
-#get_legend is used to create multiple plots in one figure. This takes the legend from a plot and then uses it for the full figure 
-#(Typically 4 plots, 1 figure).
-get_legend<-function(myggplot){
-  tmp <- ggplot_gtable(ggplot_build(myggplot))
-  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
-  legend <- tmp$grobs[[leg]]
-  return(legend)
-}
 
-
-
-#logisticMod is used to get population size for (n+1) from a logisitc model given the population this year (n), 
+#logisticMod is used to get population size from a logisitc model given the population (n), 
 #the growth rate (r), the carrying capacity (K), and the density dependence parameter (theta).
-#When theta = 1, density dependence is linear.
+#When theta = 1, density dependence is linear. For the paper, we use theta = 1. This corresponds
+#to equation 6 in the paper.
 
 logisticMod = function(n, r, K, theta){
   population = n + n * r * (1- (n/K)^theta)
@@ -25,8 +21,10 @@ logisticMod = function(n, r, K, theta){
 
 #populationSample is used to get a sample from the true population.
 #This way we introduce sampling error into our population estimates.
-#This equation follows a log normal distribution and can be found in Wade's Paper on page 10 (equation 3).
+#This equation follows a log normal distribution, see equation 8 in the paper.
 #Here, n is the population size and cv is the coeffcient of variation.
+
+#If the population sample is 0 then the new sample should also be 0, since the population has died.
 
 populationSample = function(n, cv){
   
@@ -39,11 +37,10 @@ populationSample = function(n, cv){
   return(newSample)
 }
 
-#nMinEstimation is used to estimate nMin as a Perc. of the log-normal distribution.
-#nHat is the estimated population (gotten from the populationSample function),
+#nMinEstimation is used to estimate nMin as a Perc. of the log-normal distribution. This is equation 9 in the paper.
+#nHat is the estimated population. This will be that value that populationSample returns.
 #cv is the coeffcient of variation, and z is the standard normal variate used for getting Percentiles. 
 #For example, z = 1.96 is associated with the 2.5th Percentile. and .842 is associated with the 20th Percentile. 
-#This equation comes from Wades paper on page 10 (equation 4).
 
 nMinEstimation= function(nHat, cv, z){
   
@@ -53,16 +50,16 @@ nMinEstimation= function(nHat, cv, z){
 }
 
 #pbrLogistic is used to calculate the PBR (potential biological removal) levels for the logisitic model. 
-#This equation can be found on page 5 of Wades paper, (equation 1). r is the maximum growth rate, 
-#nMin is the estimate of the population size (gotten from the nMinEstimation) function, and 
-#f is the safety factor (often chosen by managers).
+#This is equation 1 from the paper
+#r is the maximum growth rate,nMin is the estimate of the population size -gotten from the nMinEstimation function
+#f is the safety/recovery factor.
 
 pbrLogistic = function(r, nMin, f){
   return((r/2)*nMin*f) 
 }
 
 
-#simulateLogModel creates a single simulation (of t years), following the steps from Wades paper.
+#simulateLogModel creates a single simulation (of t years), following the steps as specified in the paper.
 #It starts off with an initial population (initialPop), usually a set fraction of the carrying capacity (K). 
 #Then we get the true population size from the logisticMod function.
 #We estimate the true population size using popEstimate and then we get our nMin calculation using nMinEstimation. 
@@ -105,11 +102,16 @@ monteCarloModelLog = function(initialPop, r, K, theta, t, cv, z, f, N){
   return(populationSimulations)
 }
 
-#alleeMod is used to get population size for (n+1) from a model with an added allee effect
+#The following funcitons follow a similar process as the previous ones. However,
+#now the Allee effect has been introduced.
+
+#alleeMod is used to get population size from a model with an added allee effect
 #given the population this year (n), the growth rate (r), the carrying capacity (K),
 #the minimum a population size can be (alleeThreshold), 
 #the density dependence parameter for the logisitc part (theta1), 
 #and the density dependence parameter for the allee effect part (theta2).
+
+#This function corresponds to equation 5 from the paper.
 
 alleeMod = function(n, r, K, alleeThreshold, theta1, theta2){
   
@@ -186,7 +188,7 @@ simulateAlleeModel = function(initialPop, r, K, theta1, theta2, t, cv, z, f, all
     nMin = nMinEstimation(popEstimate, cv,z)
     
     PBR = pbrAllee(K, r, alleeThreshold,nMin,f)
-    #print(PBR)
+
     newPBR = rnorm(1,PBR, 0.3*PBR)
     
     population[i] = popSize - newPBR
@@ -296,4 +298,12 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
   return(datac)
 }
 
-
+#get_legend is used to create multiple plots in one figure. This takes the legend from a plot and then uses it for the full figure 
+#(Typically 4 plots, 1 figure). This was taken from a response on stackoverflow.com. The original function can
+#be found here: http://stackoverflow.com/questions/13649473/add-a-common-legend-for-combined-ggplots.
+get_legend<-function(myggplot){
+  tmp <- ggplot_gtable(ggplot_build(myggplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)
+}
