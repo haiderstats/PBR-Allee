@@ -21,7 +21,7 @@ startingPop = EQ[2] + .05*10000
 #Do the simulations.
 
 #Note we take the last year in the data structure, and all the 
-#columns that aren't the year so the 2nd through the 2001st.
+#columns that aren't classifed as the year. The first column is  'year' so we will get rid of it.
 #We divide by 10000 to get a proporiton of K instead of a specific number.
 alleeSmallCet1 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 
 alleeSmallCet.95 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 1000, cv = .2, z = 1.036, f = .95, alleeThreshold = 1000, N = 2000)[1001, 2:2001]/10000 

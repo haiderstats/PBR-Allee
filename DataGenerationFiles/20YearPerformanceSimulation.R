@@ -19,7 +19,7 @@ EQ = findEquilibrium(.04, 10000, 1000, DetPBR)
 startingPop = EQ[2] + .05*10000
 
 #Note we take the last year in the data structure, and all the 
-#columns that aren't the year so the 2nd through the 2001st.
+#columns that aren't classifed as the year. The first column is  'year' so we will get rid of it.
 #We divide by 10000 to get a proporiton of K instead of a specific number.
 
 #Do the simulations
