@@ -1,6 +1,9 @@
 library(ggplot2)
 library(reshape)
 
+#This R-script will generate the data for the figure 2 of the paper.
+
+#This will generate the PBR vaues for the Allee model.
 pbrWithAllee = function(rmax, K, alleeThreshold){
   pbrVec = c()
   hVec = c()
@@ -44,7 +47,7 @@ PBRForAllee = cbind.data.frame(PBRForAllee, Model = rep("Allee Model", nrow(PBRF
 
 BothPBR = melt(list(Logistic = PBRForLogistic, Allee = PBRForAllee), id.vars = c("Model", "h"))[c(-5, -3)]
 
-
+#Build the figure.
 ggplot(data = BothPBR, aes(h, value, linetype = Model)) +
   theme_bw() + 
   geom_line(size = 1.2)  +

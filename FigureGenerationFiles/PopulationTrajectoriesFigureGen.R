@@ -1,7 +1,9 @@
+#This file generates the data for Figure 1 and generates the figure.
+
 library(ggplot2)
 library(reshape2)
 
-
+#This simulates a discrete form logistic growth model.
 logisticMod = function(initialPop, rmax, K, t){
   population = c()
   population[1] = initialPop
@@ -14,6 +16,7 @@ logisticMod = function(initialPop, rmax, K, t){
   return(population)
 }
 
+#This simulates a discrete form growth model that incorporates the Allee effect.
 alleeMod = function(initialPop, rmax, K, nMin, t){
   population = c()
   population[1] = initialPop
@@ -27,14 +30,20 @@ alleeMod = function(initialPop, rmax, K, nMin, t){
   return(population)
 }
 
+#Generates the logistic growth model.
 logModel = cbind.data.frame(Year = 1:350, logModel = logisticMod(1,.1,100,350))
+
+#Generates the Allee model that dies off (it started below the allee threshold).
 deadAllee = cbind.data.frame(Year = 1:350, deadAllee = alleeMod(9,.1,100,10,350))
+
+#Generates the Allee model that survives, (it started above the allee threshold).
 happyAllee = cbind.data.frame(Year = 1:350, happyAllee = alleeMod(11, .1,100,10,350))
 
 allModels = cbind.data.frame(Year = 1:350, logModel = logModel, deadAllee = deadAllee, happyAllee = happyAllee)
 allModelsMelted = melt(allModels, id = "Year")
 names(allModelsMelted) = c("Year", "Model","Value")
 
+#Plot it.
 ggplot(data = logModel, aes(Year)) +
   theme_bw() + 
   scale_color_grey() +

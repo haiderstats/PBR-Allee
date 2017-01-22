@@ -48,16 +48,16 @@ logisticBig20th = monteCarloModelLog(initialPop = 3000, r = .04, K = 10000, thet
 alleeBig20thNormPBR = monteCarloModelAlleeNormPBR(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 100, cv = .8, z = .842, f = 1, alleeThreshold = 1000, N = 30)
 
 
-#This is a simple (sneaky) way of relabeling all of the column names by simulation number.
+#This is a simple way of relabeling all of the column names by simulation number.
 alleeSmallBest = alleeSmallBest[1:31]
 #Make the data long form
 alleeSmallBest = melt(alleeSmallBest, id.vars = "Year")
 
-#Create proportions out of the numbers.
+#Create proportions.
 alleeSmallBest[3] = alleeSmallBest[3]/10000 
 
 
-#Do all the same steps for the other simulations.
+#Apply the same cleaning method as the three stpes above.
 logisticSmallBest = logisticSmallBest[1:31]
 logisticSmallBest = melt(logisticSmallBest, id.vars = "Year")
 
@@ -84,7 +84,7 @@ smallBest = ggplot(data = alleeSmallBest, aes(Year)) +
   scale_colour_brewer(name = "Model", palette = "Set1") + 
   theme(axis.text = element_text(face = "bold", color = "black", size = 18))  +
   geom_hline(yintercept = .6841641, linetype = "dashed") +
-    scale_color_grey(start = .01, end = .85) + 
+   scale_color_grey(start = .01, end = .85) + 
   annotate("text", x = 10, y = .85, label = "C", size = 13)
 
 #We will take the legend from this plot so we are choosing to label this one.

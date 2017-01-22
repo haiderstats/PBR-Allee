@@ -1,4 +1,5 @@
-#This file is used to generate the values like those used in the table of the PBR paper.
+#This file is used to generate the values needed to compare the PBR's of the 
+#Allee model and logistic model. These functions corresponds to section 2.4 of the paper.
 
 #This is the same function as that in 'HelperFunction.R'. It generates our Allee PBR and the harvesting rate.
 pbrWithAllee = function(rmax, K, alleeThreshold){
@@ -44,7 +45,7 @@ biggestTakeAllee = function(rmax, K, alleeThreshold){
   return(maximum)
 }
 
-#Same thing for the logistic model.
+#Same thing as above just for the logistic model.
 biggestTakeLogistic = function(rmax, K){
   logisticPBR = pbrLogistic(rmax, K)
   
@@ -52,6 +53,7 @@ biggestTakeLogistic = function(rmax, K){
   
   return(maximum)
 }
+
 
 #This function will take the the allee model and logisitic model and compare them for given r, K, alee threshold. 
 compareAlleeLogistic = function(rmax, K, alleeThreshold){

@@ -1,5 +1,3 @@
-#Figure Generation
-
 
 #This is the file for creating the figures in the PBR Paper. The simulations take
 #A very long time to run (varies between an hour and a day) so I have saved the simulation data to three different files.
