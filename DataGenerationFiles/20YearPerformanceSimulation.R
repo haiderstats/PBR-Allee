@@ -23,17 +23,17 @@ startingPop = EQ[2] + .05*10000
 #We divide by 10000 to get a proporiton of K instead of a specific number.
 
 #Do the simulations
-alleeSmallCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeSmallCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 1, alleeThreshold = 1000, N = 20) [21, 2:2001]/10000 
+alleeSmallCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 #Structure the simulation
 alleeSmallCet50 = cbind.data.frame(Percentile = 50, alleeSmallCet50)
@@ -48,7 +48,7 @@ alleeSmallCet10 = cbind.data.frame(Percentile = 10, alleeSmallCet10)
 alleeSmallCet5 = cbind.data.frame(Percentile = 5, alleeSmallCet5)
 alleeSmallCet2.5 = cbind.data.frame(Percentile = 2.5, alleeSmallCet2.5)
 
-#Long form data
+#Long form data also we only grab the proportion survivedand the percentile.
 alleeSmallCet50 = melt(alleeSmallCet50, id.vars = "Percentile")[,c(1,3)]
 alleeSmallCet45 = melt(alleeSmallCet45, id.vars = "Percentile")[,c(1,3)]
 alleeSmallCet40 = melt(alleeSmallCet40, id.vars = "Percentile")[,c(1,3)]
@@ -79,17 +79,17 @@ allAlleeSmallCet = cbind.data.frame(Type = "Cetacean, CV = 0.2", allAlleeSmallCe
 
 ########
 
-alleeBigCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeBigCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 
 alleeBigCet50 = cbind.data.frame(Percentile = 50, alleeBigCet50)
@@ -138,17 +138,17 @@ EQ = findEquilibrium(.1, 10000, 500, DetPBR)
 
 startingPop = EQ[2] + .05*10000
 
-alleeSmallBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeSmallBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 alleeSmallBat50 = cbind.data.frame(Percentile = 50, alleeSmallBat50)
 alleeSmallBat45 = cbind.data.frame(Percentile = 45, alleeSmallBat45)
@@ -190,17 +190,17 @@ allAlleeSmallBat = cbind.data.frame(Type = "Indiana Bat, CV = 0.2", allAlleeSmal
 
 ########
 
-alleeBigBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeBigBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 1, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 
 alleeBigBat50 = cbind.data.frame(Percentile = 50, alleeBigBat50)
@@ -258,17 +258,17 @@ EQ = findEquilibrium(.04, 10000, 1000, DetPBR)
 
 startingPop = EQ[2] + .05*10000
 
-alleeSmallCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeSmallCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 alleeSmallCet50 = cbind.data.frame(Percentile = 50, alleeSmallCet50)
 alleeSmallCet45 = cbind.data.frame(Percentile = 45, alleeSmallCet45)
@@ -310,17 +310,17 @@ allAlleeSmallCet = cbind.data.frame(Type = "Cetacean, CV = 0.2", allAlleeSmallCe
 
 
 
-alleeBigCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeBigCet50 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet45 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet40 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet35 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet30 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet25 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet20 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet15 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet10 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigCet2.5 = monteCarloModelAllee(initialPop = startingPop, r = .04, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 
 alleeBigCet50 = cbind.data.frame(Percentile = 50, alleeBigCet50)
@@ -369,17 +369,17 @@ startingPop = EQ[2] + .05*10000
 
 #startingPop = EQ[1]
 
-alleeSmallBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeSmallBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeSmallBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeSmallBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .2, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 alleeSmallBat50 = cbind.data.frame(Percentile = 50, alleeSmallBat50)
 alleeSmallBat45 = cbind.data.frame(Percentile = 45, alleeSmallBat45)
@@ -421,17 +421,17 @@ allAlleeSmallBat = cbind.data.frame(Type = "Indiana Bat, CV = 0.2", allAlleeSmal
 
 ########
 
-alleeBigBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
-alleeBigBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[101, 2:2001]/10000 
+alleeBigBat50 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat45 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.126, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat40 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.253, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat35 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.385, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat30 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.524, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat25 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.675, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat20 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 0.842, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat15 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.036, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat10 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.282, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.645, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
+alleeBigBat2.5 = monteCarloModelAllee(initialPop = startingPop, r = .10, K = 10000, theta1 = 1, theta2 = 1, t = 20, cv = .8, z = 1.96, f = 0.5, alleeThreshold = 1000, N = 2000)[21, 2:2001]/10000 
 
 
 alleeBigBat50 = cbind.data.frame(Percentile = 50, alleeBigBat50)
