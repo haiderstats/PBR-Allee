@@ -1,3 +1,6 @@
+library(ggplot2)
+library(reshape)
+
 pbrWithAllee = function(rmax, K, alleeThreshold){
   pbrVec = c()
   hVec = c()
@@ -47,7 +50,6 @@ ggplot(data = BothPBR, aes(h, value, linetype = Model)) +
   geom_line(size = 1.2)  +
   labs(x = "Proportion Harvested (h)", y = "Quantity Harvested (PBR)") + 
   theme(axis.text = element_text(size = 18)) +
-  labs(x = "Year", y = "Population") +
   theme(text = element_text(size = 25)) + 
   theme(axis.title = element_text(size=30)) 
 
