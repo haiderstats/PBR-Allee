@@ -265,7 +265,7 @@ biggestTakeAllee = function(rmax, K, alleeThreshold){
 }
 
 #The following function is to find the values for error bars.
-#Taken from: http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/
+#This is an edited version of code that was taken from: http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
                       conf.interval=.95, .drop=TRUE) {
   library(plyr)
