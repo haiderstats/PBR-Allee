@@ -1,7 +1,7 @@
 # PBR-Allee
 
-This repository serves as a supplement to the Incorporating Allee effects into the Potential Biological
-Removal criterion paper submitted to Natural Resource Modeling. In the [Data folder](https://github.com/haiderstats/PBR-Allee/tree/master/Data) can be found the data used to generate Figure 5,6, and 7 (The 100 year performance, 20 year performance, and the carrying capacity performance respectively). 
+This repository serves as a supplement to the [Incorporating Allee effects into the potential biological
+removal level](https://onlinelibrary.wiley.com/doi/abs/10.1111/nrm.12133)  paper published in Natural Resource Modeling. In the [Data folder](https://github.com/haiderstats/PBR-Allee/tree/master/Data) can be found the data used to generate Figure 5,6, and 7 (The 100 year performance, 20 year performance, and the carrying capacity performance respectively). 
 
 The files for data generation can be found in [DataGenerationFiles folder](https://github.com/haiderstats/PBR-Allee/tree/master/DataGenerationFiles). The notes for each file can be found at the beginning of each of in the comments.
 
